@@ -1,0 +1,141 @@
+.header {
+
+    &__content {
+        display: grid; 
+        grid-template-areas: 
+            "logo contacts"
+            "logo menu";
+            padding-top: 50px;
+
+
+            @media (max-width: map-get($breakpoints, tablet)){
+                  grid-template-areas: 
+                        "contacts"
+                        "logo"
+                        "menu";
+            }
+
+            @media (max-width: map-get($breakpoints, mobile)){
+                grid-template-areas: 
+                        "contacts contacts"
+                        "logo hamburger"
+                        ;
+            }
+       }
+            
+
+    &__logo {
+        width: fit-content;
+        grid-area: logo;
+        height: fit-content;
+    }
+    
+    &__contacts {
+        width: fit-content;
+        margin-left:auto;
+        grid-area: contacts;
+        display: flex;
+        margin-bottom: 16px;
+
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-left: initial;
+        }
+
+    }
+
+    &__menu {
+        width: fit-content;
+        margin-left:auto;
+        grid-area: menu;
+        height: fit-content;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-left: initial;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)){
+            display: none;
+       }
+    }
+    
+    &__hamburger {
+        display: none;
+        background-color: #eee8aa;
+        height: 50px;
+        width: 50px;
+        grid-area: hamburger;
+        margin-left:auto;
+        
+       @media (max-width: map-get($breakpoints, mobile)){
+            display: flex;
+       }
+    }
+
+&__languages {
+    display: flex;
+    @include headerDot;
+}
+
+&__language {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1px;
+    color: white;
+    width: 33px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: none;
+   
+
+
+    &--active {
+       background-color:#f0145a;
+       border-radius: 8px;
+       pointer-events: none;
+ }
+
+    &:hover {
+        background-color: #f0145a;
+        transition: background-color 0.5s ease;
+    }
+}
+
+
+&__address {
+    font-style: normal;
+    @include headerDot;
+}
+
+&__callback {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    @include headerDot;
+    
+
+}
+&__fb {}
+
+&__menu-list {
+    display: flex; 
+    gap: 15px;
+}
+
+&__menu-item {}
+
+&__menu-link {
+    font-weight: 700;
+    font-size: 16px;
+    color:  #ffffff;
+
+    }
+
+
+}
+
