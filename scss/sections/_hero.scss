@@ -1,4 +1,6 @@
 .hero {
+    z-index: 3;
+
     .content {
     padding-bottom: 30px;
     }
@@ -12,10 +14,32 @@
         font-size: 38px;
         line-height: 100%;
         text-align: center;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin: {
+            top: 269px;
+            bottom: 405px;
+        };
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            margin: {
+            top: 129px;
+            bottom: 159px;
+            left: auto;
+            right: auto;
+        };
+
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        aling-items: center;
+        }
                 
     }
 
     &__anchor {
+        color: white;
         margin: 0 auto;
         display: flex;
         width: 42px;
@@ -33,9 +57,17 @@
 }
 
 .top {
-    background-image: url(./../images/hero.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        position: absolute;
+        margin: 0 auto;
+        align-self: center;
+        z-index: 1;
+        height: 100%;
+
+    }
    
 }

@@ -13,7 +13,16 @@
         margin: {
             left: auto;
             right: auto;
+        };
+
+        @media (max-width: map-get($breakpoints, tablet-lg)) {
+            width: 100%;
         }
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            flex-direction: column;
+        }
+        
     }
 
     &__tab-links {
@@ -26,6 +35,30 @@
         border-right: 4px solid #ffffff4d;
         padding-right: 60px;
         opacity: 0.7;
+        white-space: nowrap;
+        
+
+          @media (max-width: map-get($breakpoints, tablet)) {
+            border-right: none;
+            // border-bottom: 4px solid #ffffff4d;
+            padding-bottom: 30px;
+            flex-direction: row;
+            overflow-x: scroll;
+            justify-content: flex-start;
+            position: absolute;
+            left: 0;
+            width: calc(100vw - 25px);
+            padding-left: calc((100% - 648px) / 2);
+            padding-right: calc((100% - 648px) / 2);
+            
+            
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+       
         
         
     }
@@ -36,7 +69,6 @@
         font-size: 38px;
         line-height: 100%;
         
-
 
         &--active {
             pointer-events: none;
@@ -59,6 +91,14 @@
         flex-direction: column;
         display: flex;
         padding-left: 60px;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            padding-top: 30px;
+             border-top: 4px solid #ffffff4d;
+             padding-left: 0;
+            margin-top: 68px;
+        }
+
     }
 
     &__tab-title {

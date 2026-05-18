@@ -56,13 +56,29 @@
 
 &__offer {
     width: calc(100% /3 - 40px);
-}
-&__img {}
-&__offer-title {}
-
-&__description {
 
 }
+&__img {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    padding: 14px;
+    background-color: white;
+    margin-bottom: 44px;
+
+}
+&__offer-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    color:#24A3FF;
+    padding-bottom: 15px;
+
+
+
+}
+
+&__description {}
 
 }
 

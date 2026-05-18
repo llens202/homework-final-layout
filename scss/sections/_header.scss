@@ -1,4 +1,9 @@
 .header {
+    z-index: 2;
+    @media (max-width: map-get($breakpoints, mobile)) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     &__content {
         display: grid; 
@@ -20,6 +25,7 @@
                         "contacts contacts"
                         "logo hamburger"
                         ;
+                        padding-top: 0;
             }
        }
             
@@ -28,6 +34,19 @@
         width: fit-content;
         grid-area: logo;
         height: fit-content;
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            width: 70px;
+            margin-top: 15px;
+
+            img {
+                width: 100%;
+            }
+        }
     }
     
     &__contacts {
@@ -40,6 +59,23 @@
 
         @media (max-width: map-get($breakpoints, tablet)) {
             margin-left: initial;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            background-color: #F5F5FA33;
+            
+            padding: {
+                top: 10px;
+                bottom: 10px;
+                left: 15px;
+                right: 15px;
+            };
+
+            width: 100%;
+            box-sizing: content-box;
+            margin-left: -15px;
+            margin-bottom: 0;
         }
 
     }
@@ -61,14 +97,36 @@
     
     &__hamburger {
         display: none;
-        background-color: #eee8aa;
-        height: 50px;
-        width: 50px;
+        height: 32px;
+        width: 32px;
         grid-area: hamburger;
         margin-left:auto;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12.5px;
         
        @media (max-width: map-get($breakpoints, mobile)){
             display: flex;
+       }
+
+       div {
+           width: 18px;
+           height: 14px;
+           border-top: 2.5px solid white;
+           border-bottom: 2.5px solid white;
+           position: relative;
+           display: flex;
+           align-items: center;
+
+           &::after {
+            content: '';
+            background-color: white;
+            width: 18px;
+            height: 2px;
+            position:absolute;
+
+           }
+
        }
     }
 
@@ -110,6 +168,10 @@
 &__address {
     font-style: normal;
     @include headerDot;
+
+     @media (max-width: map-get($breakpoints, mobile)) {
+            display: none;
+        }
 }
 
 &__callback {
@@ -117,10 +179,19 @@
     font-size: 16px;
     color: white;
     @include headerDot;
+
+    @media (max-width: map-get($breakpoints, mobile)) {
+            margin-left: auto;
+        }
+    
     
 
 }
-&__fb {}
+&__fb {
+    @media (max-width: map-get($breakpoints, mobile)) {
+            display: none;
+        }
+}
 
 &__menu-list {
     display: flex; 
