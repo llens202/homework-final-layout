@@ -54,4 +54,16 @@ body {
         padding-left: 30px;
         padding-right: 30px;
     }
+
 }
+
+    .wide-block {
+        margin: {
+            top: 50px;
+             bottom: 50px;
+        };
+
+        .content {
+        background-color: yellowgreen;
+        }
+    }

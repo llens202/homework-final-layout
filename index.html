@@ -154,18 +154,45 @@
             </div>
         </div>
     </div>
-</div>   
-
-    <div class="container">
-        <div class="content">
-<picture>
-        <source srcset="./images/image1x.jpg 1x, ./images/image2x.jpg 2x">
-
-        <img src="./images/image1x.jpg" alt="Responsive banner descrintion" loading="lazy">
-</picture>
+</div>  
 
 
-        </div>
+<section class="container testimonial">
+    <div class="content">
+        
+        <!-- Сама картка, яка об'єднує і фото, і текст -->
+        <div class="testimonial__card">
+            
+            <!-- Медіа-блок з фотографіяєю -->
+            <div class="testimonial__media">
+                <picture>
+                    <source srcset="./images/image1x.jpg 1x, ./images/image2x.jpg 2x">
+                    <img src="./images/image1x.jpg" alt="Олександр Олександрівський" loading="lazy">
+                </picture>
+            </div>
+
+            <!-- Текстовий блок картки -->
+            <div class="testimonial__content">
+                <div class="testimonial__label">Команда</div>
+                <blockquote class="testimonial__quote">
+                    Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                </blockquote>
+                <h3 class="testimonial__author">Олександр Олександрівський</h3>
+                <p class="testimonial__position">Керуючий партнер</p>
+            </div>
+            
+        </div> <!-- /testimonial-card -->
+
+    </div>
+</section>
+
+
+
+
+<div class="container wide-block">
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente earum fuga quasi. Voluptate magnam est ratione temporibus itaque ut quibusdam, excepturi impedit ea vel autem, repellendus soluta. Deserunt, tempora unde?
+    </div>
 </div>
      
 </body>
