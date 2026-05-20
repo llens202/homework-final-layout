@@ -1,0 +1,30 @@
+.partners {
+    //    margin: {
+    //         top: 50px;
+    //          bottom: 50px;
+    //     };
+
+
+    &__container {
+          background-color: yellowgreen;
+        //   max-width: 1720px;
+        //   width: 100%;
+        //   margin: 0 auto;
+    }
+
+    &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+        }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 430px;
+        height: 120px;
+    }    
+
+}
+

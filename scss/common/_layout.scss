@@ -22,15 +22,18 @@
         
     }
 
+}
 
-&.wide-block {
+
+.partners {
+     
 
     @media (max-width: map-get($breakpoints, mobile)) {
             padding-left: 0;
             padding-right: 0;
         }
 
-    .content {
+    &__container {
         width: calc(map-get($content-width, desktop-lg) + 50px);
         margin: 0 auto;
         
@@ -47,6 +50,7 @@
             width: 100%;
         }  
       }
-  }
+  
 }
+
 
