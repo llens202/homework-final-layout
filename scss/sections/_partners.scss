@@ -1,21 +1,20 @@
 .partners {
-    //    margin: {
-    //         top: 50px;
-    //          bottom: 50px;
-    //     };
-
+    
 
     &__container {
-          background-color: yellowgreen;
-        //   max-width: 1720px;
-        //   width: 100%;
-        //   margin: 0 auto;
+          margin-top: 60px;
+        
     }
 
     &__items {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, minmax(256px, 430px));
             justify-items: center;
+            padding-top: 30px;
+            border-radius: 12px; // Задает радиус скругления из Figma
+            overflow: hidden; 
+            
         }
 
     &__item {
@@ -24,7 +23,35 @@
         justify-content: center;
         width: 430px;
         height: 120px;
-    }    
+
+         &:hover {
+         transform: scale(1.03); // Ефект легкого збільшення при наведенні
+    }
+     
+    &:nth-child(1) { background-color:#1c4280; }
+    &:nth-child(2) { background-color:#143646; }
+    &:nth-child(3) { background-color: #f48b30; }
+    &:nth-child(4) { background-color: #9e4dc3;}
+    &:nth-child(5) { background-color: #fd9339; }
+    &:nth-child(6) { background-color: #e2e2e4;}
+    &:nth-child(7) { background-color: #c71c36;}
+    &:nth-child(8) { background-color: #dcf3f9;}
+    &:nth-child(9) { background-color: #eaeaea;}
+    &:nth-child(10) { background-color: #282240;}
+    &:nth-child(11) { background-color: #1d4568;}
+    &:nth-child(12) { background-color: #000000;}
+
+    }
+    
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+
+   
+    }
 
 }
 
