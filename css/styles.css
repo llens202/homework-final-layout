@@ -714,8 +714,44 @@ body {
   letter-spacing: 1px;
 }
 
+.publications {
+  margin-top: 60px;
+}
 .publications__list {
   display: flex;
+  gap: 30px;
+}
+.publications__link {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.publications__list {
+  padding-top: 30px;
+}
+.publications .pub-card__image {
+  border-radius: 8px 8px 0 0;
+  padding-bottom: 30px;
+}
+.publications .pub-card__title {
+  padding-bottom: 15px;
+}
+.publications .pub-card__text {
+  position: relative;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.publications .pub-card__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #e6e6f0;
+}
+.publications .pub-card__content {
+  padding: 0 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
