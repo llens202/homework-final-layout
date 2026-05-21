@@ -8,8 +8,8 @@
 
     &__items {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-columns: repeat(4, minmax(256px, 430px));
+            // grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, minmax(0, 430px));
             justify-items: center;
             padding-top: 30px;
             border-radius: 12px; // Задает радиус скругления из Figma
@@ -24,14 +24,20 @@
         width: 430px;
         height: 120px;
 
-         &:hover {
-         transform: scale(1.03); // Ефект легкого збільшення при наведенні
-    }
+    //      &:hover {
+    //      transform: scale(1.03); // Ефект легкого збільшення при наведенні
+    // }
      
-    &:nth-child(1) { background-color:#1c4280; }
+    &:nth-child(1) {
+         background-color:#1c4280; 
+         border-top-left-radius: 12px;
+        }
     &:nth-child(2) { background-color:#143646; }
     &:nth-child(3) { background-color: #f48b30; }
-    &:nth-child(4) { background-color: #9e4dc3;}
+    &:nth-child(4) {
+         background-color: #9e4dc3;
+         border-top-right-radius: 12px;
+        }
     &:nth-child(5) { background-color: #fd9339; }
     &:nth-child(6) { background-color: #e2e2e4;}
     &:nth-child(7) { background-color: #c71c36;}

@@ -655,8 +655,7 @@ body {
 }
 .partners__items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(4, minmax(256px, 430px));
+  grid-template-columns: repeat(4, minmax(0, 430px));
   justify-items: center;
   padding-top: 30px;
   border-radius: 12px;
@@ -669,11 +668,9 @@ body {
   width: 430px;
   height: 120px;
 }
-.partners__item:hover {
-  transform: scale(1.03);
-}
 .partners__item:nth-child(1) {
   background-color: #1c4280;
+  border-top-left-radius: 12px;
 }
 .partners__item:nth-child(2) {
   background-color: #143646;
@@ -683,6 +680,7 @@ body {
 }
 .partners__item:nth-child(4) {
   background-color: #9e4dc3;
+  border-top-right-radius: 12px;
 }
 .partners__item:nth-child(5) {
   background-color: #fd9339;
@@ -714,6 +712,10 @@ body {
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 1px;
+}
+
+.publications__list {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
