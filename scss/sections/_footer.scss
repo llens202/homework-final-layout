@@ -1,0 +1,71 @@
+.footer {
+
+    &__border {
+       border-top: 2px solid #e6e6f0;
+       padding-top: 30px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__row {
+        display: flex;
+        padding-bottom: 21px;
+
+    }
+
+    .footer__address {
+        font-weight: 400;
+        font-size: 16px;
+        font-size: normal !important;
+        color: #323264;
+        display: flex;
+        
+     @include headerDot;
+    }
+
+   
+
+    &__map-link {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24a3ff;
+
+
+    }
+
+    &__fb {
+         display: flex;
+     @include headerDot;
+    }
+
+    
+
+    &__phone {
+        font-weight: 700;
+        font-size: 16px;
+        color:#46466e;
+        display: flex;
+     @include headerDot;
+
+    }
+
+   
+
+    &__email {
+        font-weight: 700;
+        font-size: 16px;
+        color: #24a3ff;
+    }
+
+    &__copyright {
+        color: #b3b3ba;
+
+    }
+
+    
+}

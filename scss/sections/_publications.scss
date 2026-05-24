@@ -1,5 +1,6 @@
 .publications {
     margin-top: 60px;
+    padding-bottom: 30px;
 
     &__link {
         display: inline-flex; // Изменено с block на inline-flex для выравнивания стрелки
@@ -37,6 +38,7 @@
         gap: 30px;
         padding-top: 30px;
         align-items: stretch; // Заставляет все карточки в ряду быть одинаковой высоты
+
     } 
 
     .pub-card {
