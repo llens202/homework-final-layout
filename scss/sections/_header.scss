@@ -95,6 +95,15 @@
             display: none;
        }
     }
+
+     &__menu-link {
+        transition: color 0.5s ease; // 2. Анимируем color, а не background-color
+
+            &:hover {
+                color: #f0145a; // Станет розовым
+            }
+    }
+
     
     &__hamburger {
         display: none;

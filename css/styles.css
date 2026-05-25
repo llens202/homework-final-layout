@@ -209,6 +209,12 @@ address {
     display: none;
   }
 }
+.header__menu-link {
+  transition: color 0.5s ease;
+}
+.header__menu-link:hover {
+  color: #f0145a;
+}
 .header__hamburger {
   display: none;
   height: 32px;
@@ -542,6 +548,31 @@ address {
 }
 .services__link:hover {
   color: #F0145A;
+}
+.services__page-icon {
+  display: flex;
+  justify-content: center;
+}
+.services__page-text {
+  text-align: center;
+}
+.services__page-text p {
+  padding-bottom: 28px;
+}
+.services__title-page {
+  text-align: center;
+  padding-bottom: 28px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -wabkit-text-fill-color: transparent;
+  color: transparent;
+}
+.services__btn {
+  padding: 18px 30px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  background: rgb(36, 163, 255);
 }
 .services__title {
   margin-bottom: 60px;

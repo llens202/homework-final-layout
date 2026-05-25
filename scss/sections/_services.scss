@@ -28,10 +28,55 @@
 
     &:hover {
         color:#F0145A;
-;
     }
 
 
+
+}
+
+&__page-icon {
+    display: flex;
+    justify-content: center;
+}
+
+  
+
+
+&__page-text {
+    text-align: center;
+
+    p {
+        padding-bottom: 28px;
+    }
+}
+
+ &__title-page {
+        text-align: center;
+        padding-bottom: 28px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -wabkit-text-fill-color: transparent;
+        color: transparent;
+}
+
+// &__page-icon {
+//     width: 92px;
+//     height: 92px;
+//     border-radius: 24px;
+//     padding: 14px;
+//     background-color: white;
+//     margin-bottom: 44px;
+// }
+
+
+
+
+&__btn {
+   padding: 18px 30px;
+    margin-bottom: 60px;
+    border-radius: 12px;
+    background: rgba(36, 163, 255, 1);
 
 }
 
