@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container .content {
   width: 1600px;
   margin: 0 auto;
@@ -362,6 +363,10 @@ address {
   font-size: 16px;
   color: #ffffff;
 }
+.header__link--active {
+  color: #f0145a;
+  border-bottom: 2px solid #f0145a;
+}
 
 .hero {
   z-index: 3;
@@ -552,6 +557,7 @@ address {
 .services__page-icon {
   display: flex;
   justify-content: center;
+  padding: 60px 0 28px;
 }
 .services__page-text {
   text-align: center;
@@ -568,11 +574,55 @@ address {
   -wabkit-text-fill-color: transparent;
   color: transparent;
 }
+.services__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 15px;
+}
+.services__item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 15px;
+  padding-left: 14px; /* Освобождаем место слева под точку */
+  position: relative;
+  /* display: flex;  <- Удалено! Флекс здесь не нужен и мешает абсолютному позиционированию */
+}
+.services__item::before { /* Рекомендуется использовать before для маркеров слева */
+  content: "";
+  background-color: #f0145a;
+  /* Замените на ваш красный цвет, если нужно */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%; /* Сделайте 1px-2px, если нужна квадратная точка */
+  position: absolute;
+  left: 0;
+  top: 10px; /* Базовое положение точки (примерно по центру первой строки) */
+}
+.services .btn {
+  display: flex;
+  justify-content: center;
+}
 .services__btn {
-  padding: 18px 30px;
+  display: block;
+  padding: 15px 30px;
   margin-bottom: 60px;
   border-radius: 12px;
+  font-weight: 700;
   background: rgb(36, 163, 255);
+  color: white;
+  filter: drop-shadow(0 0 20px rgba(36, 163, 255, 0.5));
+}
+.services__divider {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5019607843);
+  margin-bottom: 30px;
+}
+.services__subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 .services__title {
   margin-bottom: 60px;

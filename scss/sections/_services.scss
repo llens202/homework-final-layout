@@ -30,13 +30,14 @@
         color:#F0145A;
     }
 
-
-
 }
+
+
 
 &__page-icon {
     display: flex;
     justify-content: center;
+    padding: 60px 0 28px;
 }
 
   
@@ -60,6 +61,39 @@
         color: transparent;
 }
 
+
+&__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 15px;
+}
+
+&__item {   
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 15px;
+    padding-left: 14px; /* Освобождаем место слева под точку */
+    position: relative;
+    /* display: flex;  <- Удалено! Флекс здесь не нужен и мешает абсолютному позиционированию */
+
+    &::before { /* Рекомендуется использовать before для маркеров слева */
+        content: '';
+        background-color: #f0145a;
+; /* Замените на ваш красный цвет, если нужно */
+        width: 6px;
+        height: 6px;
+        border-radius: 50%; /* Сделайте 1px-2px, если нужна квадратная точка */
+        position: absolute;
+        left: 0;
+        top: 10px; /* Базовое положение точки (примерно по центру первой строки) */
+    }
+
+    
+}
+
+
 // &__page-icon {
 //     width: 92px;
 //     height: 92px;
@@ -69,14 +103,36 @@
 //     margin-bottom: 44px;
 // }
 
-
+.btn {
+    display: flex;
+    justify-content: center;
+}
 
 
 &__btn {
-   padding: 18px 30px;
+    display: block;
+   padding: 15px 30px;
     margin-bottom: 60px;
     border-radius: 12px;
+    font-weight: 700;
     background: rgba(36, 163, 255, 1);
+    color: white;
+    filter: drop-shadow(0 0 20px rgba(36, 163, 255, 0.5));
+   
+
+}
+
+&__divider {
+    border-bottom: 4px solid #ffffff80;
+    margin-bottom: 30px;
+    
+}
+
+&__subtitle {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #ffffff;
 
 }
 
