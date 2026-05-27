@@ -149,9 +149,12 @@ address {
   }
 }
 .header__logo {
+  display: flex;
   width: fit-content;
   grid-area: logo;
   height: fit-content;
+  font-family: Montserrat;
+  font-size: 36px;
 }
 @media (max-width: 984px) {
   .header__logo {
@@ -366,6 +369,21 @@ address {
 .header__link--active {
   color: #f0145a;
   border-bottom: 2px solid #f0145a;
+}
+
+.divider-line {
+  flex-shrink: 0;
+  width: 6px;
+  height: 47px;
+  background-color: #f0145a;
+  margin: 0 15px;
+  transform: skewX(-20deg);
+}
+
+.services-text {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
 }
 
 .hero {
@@ -847,10 +865,37 @@ address {
   padding-top: 30px;
   align-items: stretch;
 }
+@media (max-width: 1400px) {
+  .publications__list {
+    width: 904px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 984px) {
+  .publications__list {
+    width: 648px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 .publications .pub-card {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+@media (max-width: 1400px) {
+  .publications .pub-card__span {
+    width: 904px;
+    display: grid;
+    grid-column: span 2;
+  }
+}
+@media (max-width: 984px) {
+  .publications .pub-card__span {
+    width: 648px;
+    grid-column: span 1;
+  }
 }
 .publications .pub-card__image {
   width: 100%;

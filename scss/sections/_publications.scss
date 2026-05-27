@@ -2,6 +2,8 @@
     margin-top: 60px;
     padding-bottom: 30px;
 
+    
+
     &__link {
         display: inline-flex; // Изменено с block на inline-flex для выравнивания стрелки
         align-items: center;  // Выравнивает стрелку строго по центру текста
@@ -21,6 +23,8 @@
             line-height: 1;
             transform: translateY(-1px); // Ювелирная микро-координация стрелки по центру
         }
+
+        
     }
 
     &__title {
@@ -39,12 +43,45 @@
         padding-top: 30px;
         align-items: stretch; // Заставляет все карточки в ряду быть одинаковой высоты
 
+        @media (max-width: map-get($breakpoints, tablet-lg)) {
+            width: map-get($content-width, tablet-lg);
+
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+
+        }
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            width: map-get($content-width, tablet);
+
+            display: grid;
+            grid-template-columns: 1fr;
+            
+        }
+
     } 
+
+    
 
     .pub-card {
         display: flex;         // Превращаем карточку во flex-контейнер
         flex-direction: column; // Элементы внутри идут сверху вниз
         width: 100%;           // Карточки будут делить пространство поровну
+
+        &__span {
+
+            @media (max-width: map-get($breakpoints, tablet-lg)) {
+            width: map-get($content-width, tablet-lg);
+            display: grid;
+            grid-column: span 2;
+            }
+
+            @media (max-width: map-get($breakpoints, tablet)) {
+            width: map-get($content-width, tablet);
+            grid-column: span 1;
+
+        }
+    }
 
         &__image {
             width: 100%;

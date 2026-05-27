@@ -31,9 +31,13 @@
             
 
     &__logo {
+        display: flex;
         width: fit-content;
         grid-area: logo;
         height: fit-content;
+        font-family: Montserrat;
+        font-size: 36px;
+
 
         @media (max-width: map-get($breakpoints, tablet)) {
             margin-bottom: 30px;
@@ -49,6 +53,7 @@
             }
         }
     }
+
     
     &__contacts {
         width: fit-content;
@@ -220,9 +225,24 @@
 &__link--active {
     color: #f0145a;
     border-bottom: 2px solid #f0145a;
-;
 }    
 
 
 }
 
+// линия
+
+.divider-line {
+    flex-shrink: 0;
+    width: 6px;
+    height: 47px;
+    background-color: #f0145a;
+    margin: 0 15px;
+    transform: skewX(-20deg);
+}
+
+.services-text {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
