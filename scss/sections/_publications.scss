@@ -1,6 +1,8 @@
 .publications {
     margin-top: 60px;
     padding-bottom: 30px;
+    width: 100%;
+    
 
     
 
@@ -58,6 +60,7 @@
             grid-template-columns: 1fr;
             
         }
+        
 
     } 
 
@@ -71,15 +74,19 @@
         &__span {
 
             @media (max-width: map-get($breakpoints, tablet-lg)) {
-            width: map-get($content-width, tablet-lg);
             display: grid;
             grid-column: span 2;
             }
 
             @media (max-width: map-get($breakpoints, tablet)) {
-            width: map-get($content-width, tablet);
+            display: grid;
             grid-column: span 1;
 
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            display: grid;
+            grid-column: auto;
         }
     }
 

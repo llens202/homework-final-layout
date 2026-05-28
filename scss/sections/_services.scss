@@ -67,6 +67,15 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 15px;
+
+     @media (max-width: map-get($breakpoints, mobile)) {
+            width: map-get($content-width, mobile);
+            
+               display: grid;
+               grid-template-columns: 1fr;
+               column-gap: 60px;
+               row-gap: 15px;
+        }
 }
 
 &__item {   
