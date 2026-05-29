@@ -52,6 +52,12 @@
                 width: 100%;
             }
         }
+        // .services-text {
+        //       @media (max-width: map-get($breakpoints, mobile)) {
+        //            width: 100%;
+        //    }
+        // }
+
     }
 
     
@@ -245,4 +251,5 @@
     display: flex;
     align-items: center;
     padding-bottom: 15px;
+    
 }

@@ -877,14 +877,14 @@ address {
 }
 @media (max-width: 1400px) {
   .publications__list {
-    width: 904px;
+    max-width: 904px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 984px) {
   .publications__list {
-    width: 648px;
+    max-width: 648px;
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -914,7 +914,7 @@ address {
 }
 .publications .pub-card__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 8px 8px 0 0;
 }
