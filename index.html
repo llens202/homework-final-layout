@@ -166,8 +166,16 @@
             <!-- Медіа-блок з фотографіяєю -->
             <div class="testimonial__media">
                 <picture>
-                    <source srcset="./images/image1x.jpg 1x, ./images/image2x.jpg 2x">
-                    <img src="./images/image1x.jpg" alt="Олександр Олександрівський" loading="lazy">
+                     <!-- <source media="(min-width: 904px)" srcset="./images/image2x.jpg">
+                    <source srcset="./images/image1x.jpg 1x, ./images/image2x.jpg 2x"> -->
+
+                    <img src="./images/image1x.jpg" class="photo-desktop-hd" alt="Олександр Олександрівський" loading="lazy">
+                    <img src="./images/image2x.jpg" class="photo-desktop-sd" alt="Олександр Олександрівський" loading="lazy">
+                    <img src="./images/image3x.jpg" class="photo-tablet-hd" alt="Олександр Олександрівський" loading="lazy">
+                    <img src="./images/image4x.jpg" class="photo-tablet-sd" alt="Олександр Олександрівський" loading="lazy">
+                    <img src="./images/image5x.jpg" class="photo-mobile" alt="Олександр Олександрівський" loading="lazy">
+
+                    
                 </picture>
             </div>
 
@@ -201,6 +209,7 @@
         <h3 class="partners__title">They already trust us</h3>
 
         <div class="partners__items">
+            
 
             <a href="" class="partners__item">
                 <img src="./images/parthers/hillel.svg" alt="hillel" class="partners__logo">
@@ -295,7 +304,7 @@
 
                 </article>
 
-                <article class="pub-card">
+                <article class="pub-card pub-card__span">
 
                     <div class="pub-card__image-wrapper">
                         <img class="pub-card__image" src="./images/jpeg/Cover2.jpg" alt="...">

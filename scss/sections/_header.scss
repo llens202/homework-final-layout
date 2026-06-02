@@ -37,6 +37,7 @@
         height: fit-content;
         font-family: Montserrat;
         font-size: 36px;
+        gap: 4px;
 
 
         @media (max-width: map-get($breakpoints, tablet)) {
@@ -44,7 +45,7 @@
         }
 
         @media (max-width: map-get($breakpoints, mobile)) {
-            width: 70px;
+            // width: 70px;
             margin-top: 15px;
             margin-bottom: 0;
 
@@ -57,6 +58,34 @@
         //            width: 100%;
         //    }
         // }
+
+.lo {
+    @media (max-width: map-get($breakpoints, mobile)) {
+        width: 69px;
+        height: 32px;
+}
+
+    }
+
+    .slash {
+        width: 21px;
+        height: 47px;
+
+         @media (max-width: map-get($breakpoints, mobile)) {
+            width: 11px;
+            height: 26px;
+         }
+
+    }
+
+    .services-text {
+        font-size: 36px;
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            font-size: 20px;
+            transform: translateY(-2px);
+        }
+    }
 
     }
 
@@ -239,13 +268,28 @@
 // линия
 
 .divider-line {
-    flex-shrink: 0;
-    width: 6px;
-    height: 47px;
-    background-color: #f0145a;
-    margin: 0 15px;
-    transform: skewX(-20deg);
+
+    // flex-shrink: 0;
+    // width: 6px;
+    // height: 47px;
+    // background-color: #f0145a;
+    // margin: 0 15px;
+    // transform: skewX(-20deg);
+
+    // position: relative;
 }
+
+// .divider-line::after {
+//     // content: "/";
+//     // position: absolute;
+//     // width: 11.62px;
+//     // height: 26px;
+//     // color: #f0145a;
+
+// }
+
+
+
 
 .services-text {
     display: flex;
@@ -253,3 +297,5 @@
     padding-bottom: 15px;
     
 }
+
+

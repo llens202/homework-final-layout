@@ -3,7 +3,8 @@ $breakpoints: (
     mobile: 728px,
     tablet: 984px,
     tablet-lg: 1400px,
-    desktop: 1680px
+    desktop: 1680px,
+    desktop-lg: 1920px
 );
 
 // content width
@@ -12,9 +13,15 @@ $content-width: (
     tablet: 648px,
     tablet-lg: 904px,
     desktop: 1320px,
-    desktop-mb: 1360px,
     desktop-lg: 1600px
 );
+
+$services-width: (
+    desktop-lg: 1360px,
+    desktop: 1080px,
+
+);
+
 
 // font colors
 $black: black;

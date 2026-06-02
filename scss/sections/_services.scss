@@ -1,9 +1,13 @@
 .services {
+            
+        
+  
     .content {
         padding: {
             bottom: 60px;
         };
     }
+
 
 
 &__link {
@@ -37,7 +41,7 @@
 &__page-icon {
     display: flex;
     justify-content: center;
-    padding: 60px 0 28px;
+    margin: 60px 0 28px;
 }
 
   
@@ -47,13 +51,13 @@
     text-align: center;
 
     p {
-        padding-bottom: 28px;
+        margin-bottom: 28px;
     }
 }
 
  &__title-page {
         text-align: center;
-        padding-bottom: 28px;
+        margin-bottom: 28px;
         background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
         -webkit-background-clip: text;
         background-clip: text;
@@ -67,14 +71,15 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 15px;
+    margin-bottom: 60px;
 
      @media (max-width: map-get($breakpoints, mobile)) {
             width: map-get($content-width, mobile);
             
                display: grid;
                grid-template-columns: 1fr;
-               column-gap: 60px;
-               row-gap: 15px;
+               padding: 0 30px 60px;
+               margin: 0;
         }
 }
 
@@ -82,8 +87,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
-    padding-bottom: 15px;
-    padding-left: 14px; /* Освобождаем место слева под точку */
+    padding: 0 0 15px 14px; /* Добавляем отступ слева для точки */
     position: relative;
     /* display: flex;  <- Удалено! Флекс здесь не нужен и мешает абсолютному позиционированию */
 
@@ -142,6 +146,13 @@
     font-size: 22px;
     margin-bottom: 30px;
     color: #ffffff;
+
+    
+     @media (max-width: map-get($breakpoints, mobile)) {
+            width: map-get($content-width, mobile);
+            padding-left: 30px;
+
+     }
 
 }
 

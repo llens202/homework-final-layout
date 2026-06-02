@@ -2,20 +2,22 @@
     margin-top: 60px;
         
 &__card {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr;
     background-color: #f3f3fc;
     border-radius: 12px;
      margin: 0 auto;
+
+     @media (max-width: map-get($breakpoints, tablet)) {
+        grid-template-columns: 1fr;
+     }
     
 }
 
+&__content {
+  padding: 30px 30px 30px;
+}
 
-&__media{
-    padding-right: 30px;
-
-  
-} 
 
 &__label {
     font-weight: 700;
@@ -23,10 +25,7 @@
     line-height: 100%;
     text-transform: uppercase;
     color: #24a3ff;
-    padding: {
-        top: 30px;
-        bottom: 5px;
-    };
+    margin-bottom: 5px;
 
       &::after {
         content: ">";
@@ -43,19 +42,21 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
-    
+    margin-bottom: 30px;
 
-
+    @media (max-width: map-get($breakpoints, mobile)) {
+            font-size: 30px;
+    }
 }
 
 &__author {
         font-weight: 700;
         font-size: 16px;
         line-height: 100%;
-        padding-bottom: 6px;
+        margin-bottom: 6px;
         color: #b3b3ba;
-        padding-top: 30px;
-        padding-bottom: 6px;
+
+      
 
 }
 
@@ -98,5 +99,76 @@
     }
 
   }
+   
 
-}
+  .photo-tablet {
+    display: none; /* Скрываем изображение по умолчанию */
+  }
+
+
+   .photo-desktop {
+     
+   }
+
+  
+
+   @media (max-width: map-get($breakpoints, desktop-lg)) {
+          .photo-desktop-hd {display: block;}
+            .photo-desktop-sd {display: none;}
+            .photo-tablet-hd {display: none;}
+            .photo-tablet-sd {display: none;}
+            .photo-mobile {display: none;} 
+   }
+
+    
+
+   @media (max-width: map-get($breakpoints, desktop)) {
+            .photo-desktop-hd {display: block;}
+            .photo-desktop-sd {display: none;}
+            .photo-tablet-hd {display: none;}
+            .photo-tablet-sd {display: none;}
+            .photo-mobile {display: none;} 
+        }
+
+        @media (max-width: map-get($breakpoints, desktop)) {
+            .photo-desktop-hd {display: none;}
+            .photo-desktop-sd {display: block;}
+            .photo-tablet-hd {display: none;}
+            .photo-tablet-sd {display: none;}
+            .photo-mobile {display: none;}
+
+        }
+
+      @media (max-width: map-get($breakpoints, tablet-lg)) {
+            .photo-desktop-hd {display: none;}
+            .photo-desktop-sd {display: none;}
+            .photo-tablet-hd {
+              display: block;
+            width:400px;
+            }
+            .photo-tablet-sd {display: none;}
+            .photo-mobile {display: none;}   
+          }
+        
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+            .photo-desktop-hd {display: none;}
+            .photo-desktop-sd {display: none;}
+            .photo-tablet-hd {display: none;}
+            .photo-tablet-sd {display: block;}
+            .photo-mobile {display: none;}
+        }
+
+        @media (max-width: map-get($breakpoints, mobile)) {
+            .photo-desktop-hd {display: none;}
+            .photo-desktop-sd {display: none;}
+            .photo-tablet-hd {display: none;}
+            .photo-tablet-sd {display: none;}
+            .photo-mobile {
+              display: block;
+              width: 100%;}
+        }
+
+      }
+
+

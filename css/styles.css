@@ -24,6 +24,31 @@
   }
 }
 
+.services__page-it {
+  width: 1360px;
+  margin: 0 auto;
+}
+@media (max-width: 1680px) {
+  .services__page-it {
+    width: 1080px;
+  }
+}
+@media (max-width: 1400px) {
+  .services__page-it {
+    width: 904px;
+  }
+}
+@media (max-width: 984px) {
+  .services__page-it {
+    width: 648px;
+  }
+}
+@media (max-width: 728px) {
+  .services__page-it {
+    width: 100%;
+  }
+}
+
 @media (max-width: 728px) {
   .partners {
     padding-left: 0;
@@ -155,6 +180,7 @@ address {
   height: fit-content;
   font-family: Montserrat;
   font-size: 36px;
+  gap: 4px;
 }
 @media (max-width: 984px) {
   .header__logo {
@@ -163,12 +189,36 @@ address {
 }
 @media (max-width: 728px) {
   .header__logo {
-    width: 70px;
     margin-top: 15px;
     margin-bottom: 0;
   }
   .header__logo img {
     width: 100%;
+  }
+}
+@media (max-width: 728px) {
+  .header__logo .lo {
+    width: 69px;
+    height: 32px;
+  }
+}
+.header__logo .slash {
+  width: 21px;
+  height: 47px;
+}
+@media (max-width: 728px) {
+  .header__logo .slash {
+    width: 11px;
+    height: 26px;
+  }
+}
+.header__logo .services-text {
+  font-size: 36px;
+}
+@media (max-width: 728px) {
+  .header__logo .services-text {
+    font-size: 20px;
+    transform: translateY(-2px);
   }
 }
 .header__contacts {
@@ -371,15 +421,6 @@ address {
   border-bottom: 2px solid #f0145a;
 }
 
-.divider-line {
-  flex-shrink: 0;
-  width: 6px;
-  height: 47px;
-  background-color: #f0145a;
-  margin: 0 15px;
-  transform: skewX(-20deg);
-}
-
 .services-text {
   display: flex;
   align-items: center;
@@ -575,17 +616,17 @@ address {
 .services__page-icon {
   display: flex;
   justify-content: center;
-  padding: 60px 0 28px;
+  margin: 60px 0 28px;
 }
 .services__page-text {
   text-align: center;
 }
 .services__page-text p {
-  padding-bottom: 28px;
+  margin-bottom: 28px;
 }
 .services__title-page {
   text-align: center;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -597,22 +638,22 @@ address {
   grid-template-columns: 1fr 1fr;
   column-gap: 60px;
   row-gap: 15px;
+  margin-bottom: 60px;
 }
 @media (max-width: 728px) {
   .services__list {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 60px;
-    row-gap: 15px;
+    padding: 0 30px 60px;
+    margin: 0;
   }
 }
 .services__item {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
-  padding-bottom: 15px;
-  padding-left: 14px; /* Освобождаем место слева под точку */
+  padding: 0 0 15px 14px; /* Добавляем отступ слева для точки */
   position: relative;
   /* display: flex;  <- Удалено! Флекс здесь не нужен и мешает абсолютному позиционированию */
 }
@@ -650,6 +691,12 @@ address {
   font-size: 22px;
   margin-bottom: 30px;
   color: #ffffff;
+}
+@media (max-width: 728px) {
+  .services__subtitle {
+    width: 100%;
+    padding-left: 30px;
+  }
 }
 .services__title {
   margin-bottom: 60px;
@@ -700,14 +747,19 @@ address {
   margin-top: 60px;
 }
 .testimonial__card {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
   background-color: #f3f3fc;
   border-radius: 12px;
   margin: 0 auto;
 }
-.testimonial__media {
-  padding-right: 30px;
+@media (max-width: 984px) {
+  .testimonial__card {
+    grid-template-columns: 1fr;
+  }
+}
+.testimonial__content {
+  padding: 30px 30px 30px;
 }
 .testimonial__label {
   font-weight: 700;
@@ -715,8 +767,7 @@ address {
   line-height: 100%;
   text-transform: uppercase;
   color: #24a3ff;
-  padding-top: 30px;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .testimonial__label::after {
   content: ">";
@@ -730,15 +781,19 @@ address {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
+  margin-bottom: 30px;
+}
+@media (max-width: 728px) {
+  .testimonial__quote {
+    font-size: 30px;
+  }
 }
 .testimonial__author {
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
-  padding-bottom: 6px;
+  margin-bottom: 6px;
   color: #b3b3ba;
-  padding-top: 30px;
-  padding-bottom: 6px;
 }
 .testimonial__position {
   font-weight: 400;
@@ -771,13 +826,120 @@ address {
 .testimonial__dot:hover {
   opacity: 0.6;
 }
+.testimonial .photo-tablet {
+  display: none; /* Скрываем изображение по умолчанию */
+}
+@media (max-width: 1920px) {
+  .testimonial .photo-desktop-hd {
+    display: block;
+  }
+  .testimonial .photo-desktop-sd {
+    display: none;
+  }
+  .testimonial .photo-tablet-hd {
+    display: none;
+  }
+  .testimonial .photo-tablet-sd {
+    display: none;
+  }
+  .testimonial .photo-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1680px) {
+  .testimonial .photo-desktop-hd {
+    display: block;
+  }
+  .testimonial .photo-desktop-sd {
+    display: none;
+  }
+  .testimonial .photo-tablet-hd {
+    display: none;
+  }
+  .testimonial .photo-tablet-sd {
+    display: none;
+  }
+  .testimonial .photo-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1680px) {
+  .testimonial .photo-desktop-hd {
+    display: none;
+  }
+  .testimonial .photo-desktop-sd {
+    display: block;
+  }
+  .testimonial .photo-tablet-hd {
+    display: none;
+  }
+  .testimonial .photo-tablet-sd {
+    display: none;
+  }
+  .testimonial .photo-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .testimonial .photo-desktop-hd {
+    display: none;
+  }
+  .testimonial .photo-desktop-sd {
+    display: none;
+  }
+  .testimonial .photo-tablet-hd {
+    display: block;
+    width: 400px;
+  }
+  .testimonial .photo-tablet-sd {
+    display: none;
+  }
+  .testimonial .photo-mobile {
+    display: none;
+  }
+}
+@media (max-width: 984px) {
+  .testimonial .photo-desktop-hd {
+    display: none;
+  }
+  .testimonial .photo-desktop-sd {
+    display: none;
+  }
+  .testimonial .photo-tablet-hd {
+    display: none;
+  }
+  .testimonial .photo-tablet-sd {
+    display: block;
+  }
+  .testimonial .photo-mobile {
+    display: none;
+  }
+}
+@media (max-width: 728px) {
+  .testimonial .photo-desktop-hd {
+    display: none;
+  }
+  .testimonial .photo-desktop-sd {
+    display: none;
+  }
+  .testimonial .photo-tablet-hd {
+    display: none;
+  }
+  .testimonial .photo-tablet-sd {
+    display: none;
+  }
+  .testimonial .photo-mobile {
+    display: block;
+    width: 100%;
+  }
+}
 
 .partners__container {
   margin-top: 60px;
 }
 .partners__items {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 430px));
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   padding-top: 30px;
   border-radius: 12px;
@@ -787,7 +949,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 430px;
+  width: 100%;
   height: 120px;
 }
 .partners__item:nth-child(1) {
