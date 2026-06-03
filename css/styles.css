@@ -749,9 +749,9 @@ address {
 .testimonial__card {
   display: grid;
   grid-template-columns: auto 1fr;
-  background-color: #f3f3fc;
   border-radius: 12px;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media (max-width: 984px) {
   .testimonial__card {
@@ -759,6 +759,7 @@ address {
   }
 }
 .testimonial__content {
+  background-color: #f3f3fc;
   padding: 30px 30px 30px;
 }
 .testimonial__label {
@@ -826,8 +827,18 @@ address {
 .testimonial__dot:hover {
   opacity: 0.6;
 }
-.testimonial .photo-tablet {
-  display: none; /* Скрываем изображение по умолчанию */
+.testimonial .testimonial__img {
+  width: 100%;
+  height: auto;
+}
+.testimonial .photo-desktop-hd {
+  display: block;
+}
+.testimonial .photo-desktop-sd,
+.testimonial .photo-tablet-hd,
+.testimonial .photo-tablet-sd,
+.testimonial .photo-mobile {
+  display: none;
 }
 @media (max-width: 1920px) {
   .testimonial .photo-desktop-hd {
@@ -937,13 +948,45 @@ address {
 .partners__container {
   margin-top: 60px;
 }
+@media (max-width: 1680px) {
+  .partners__container {
+    width: 100%;
+  }
+}
+@media (max-width: 1400px) {
+  .partners__container {
+    width: 100%;
+  }
+}
 .partners__items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  padding-top: 30px;
+  margin-top: 30px;
   border-radius: 12px;
   overflow: hidden;
+}
+@media (max-width: 1680px) {
+  .partners__items {
+    border-radius: 0;
+  }
+}
+@media (max-width: 1400px) {
+  .partners__items {
+    border-radius: 0;
+  }
+}
+@media (max-width: 984px) {
+  .partners__items {
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 0;
+  }
+}
+@media (max-width: 728px) {
+  .partners__items {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
 }
 .partners__item {
   display: flex;
@@ -954,7 +997,6 @@ address {
 }
 .partners__item:nth-child(1) {
   background-color: #1c4280;
-  border-top-left-radius: 12px;
 }
 .partners__item:nth-child(2) {
   background-color: #143646;
@@ -964,7 +1006,6 @@ address {
 }
 .partners__item:nth-child(4) {
   background-color: #9e4dc3;
-  border-top-right-radius: 12px;
 }
 .partners__item:nth-child(5) {
   background-color: #fd9339;
@@ -989,6 +1030,11 @@ address {
 }
 .partners__item:nth-child(12) {
   background-color: #000000;
+}
+@media (max-width: 728px) {
+  .partners__item:nth-last-child(-n+6) {
+    display: none;
+  }
 }
 .partners__title {
   text-align: center;

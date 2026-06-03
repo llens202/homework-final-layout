@@ -4,9 +4,9 @@
 &__card {
     display: grid;
     grid-template-columns: auto 1fr;
-    background-color: #f3f3fc;
     border-radius: 12px;
      margin: 0 auto;
+     overflow: hidden; 
 
      @media (max-width: map-get($breakpoints, tablet)) {
         grid-template-columns: 1fr;
@@ -15,6 +15,7 @@
 }
 
 &__content {
+  background-color: #f3f3fc;
   padding: 30px 30px 30px;
 }
 
@@ -101,16 +102,25 @@
   }
    
 
-  .photo-tablet {
-    display: none; /* Скрываем изображение по умолчанию */
-  }
+  // .photo-tablet {
+  //   display: none; /* Скрываем изображение по умолчанию */
+  // }
 
 
-   .photo-desktop {
+  //  .photo-desktop {
      
+  //  }
+
+   .testimonial__img {
+    width: 100%;
+    height: auto;
    }
 
-  
+  .photo-desktop-hd { display: block; }
+.photo-desktop-sd,
+.photo-tablet-hd,
+.photo-tablet-sd,
+.photo-mobile     { display: none; }
 
    @media (max-width: map-get($breakpoints, desktop-lg)) {
           .photo-desktop-hd {display: block;}

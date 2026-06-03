@@ -3,6 +3,17 @@
 
     &__container {
           margin-top: 60px;
+
+          
+        @media (max-width: map-get($breakpoints, desktop)) {
+            width: 100%;
+        }
+
+            @media (max-width: map-get($breakpoints, tablet-lg)){
+        width: 100%;
+     }
+
+     
            
         
     }
@@ -12,10 +23,34 @@
             // grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
-            padding-top: 30px;
+            margin-top: 30px;
             border-radius: 12px; // Задает радиус скругления из Figma
             overflow: hidden; 
-            
+
+            @media (max-width: map-get($breakpoints, desktop)) {
+                border-radius: 0; // Убираем скругление на десктопе
+            }
+
+             @media (max-width: map-get($breakpoints, tablet-lg)) {
+                border-radius: 0; // Убираем скругление на планшете
+             }
+
+            @media (max-width: map-get($breakpoints, tablet)) {
+              grid-template-columns: repeat(3, 1fr);
+              border-radius: 0; // Убираем скругление на планшете
+     }
+             @media (max-width: map-get($breakpoints, mobile)) {
+                grid-template-columns: 1fr;
+                border-radius: 0; // Убираем скругление на мобильных устройствах
+
+                // &:nth-child(7){display: none;}
+                // &:nth-child(8){display: none;}
+                // &:nth-child(9){display: none;}
+                // &:nth-child(10){display: none;}
+                // &:nth-child(11){display: none;}
+                // &:nth-child(12){display: none;}
+             }
+
         }
 
     &__item {
@@ -29,16 +64,10 @@
     //      transform: scale(1.03); // Ефект легкого збільшення при наведенні
     // }
      
-    &:nth-child(1) {
-         background-color:#1c4280; 
-         border-top-left-radius: 12px;
-        }
+    &:nth-child(1) {background-color:#1c4280;}
     &:nth-child(2) { background-color:#143646; }
     &:nth-child(3) { background-color: #f48b30; }
-    &:nth-child(4) {
-         background-color: #9e4dc3;
-         border-top-right-radius: 12px;
-        }
+    &:nth-child(4) {background-color: #9e4dc3;}
     &:nth-child(5) { background-color: #fd9339; }
     &:nth-child(6) { background-color: #e2e2e4;}
     &:nth-child(7) { background-color: #c71c36;}
@@ -47,6 +76,12 @@
     &:nth-child(10) { background-color: #282240;}
     &:nth-child(11) { background-color: #1d4568;}
     &:nth-child(12) { background-color: #000000;}
+
+     @media (max-width: map-get($breakpoints, mobile)) {
+    &:nth-last-child(-n + 6) {
+    display: none;
+}
+    }
 
     }
     
@@ -59,6 +94,8 @@
 
    
     }
+
+   
 
 }
 
