@@ -45,8 +45,9 @@
     width: fit-content;
     margin-bottom: 30px;
 
-    @media (max-width: map-get($breakpoints, mobile)) {
-            font-size: 28px;
+    @media (max-width: map-get($breakpoints, mobile))  {
+            overflow-wrap: anywhere; // Дозволяє переносити слова на новий рядок, якщо вони не поміщаються
+            font-size: 30px;
     }
 }
 

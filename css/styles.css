@@ -786,7 +786,8 @@ address {
 }
 @media (max-width: 728px) {
   .testimonial__quote {
-    font-size: 28px;
+    overflow-wrap: anywhere;
+    font-size: 30px;
   }
 }
 .testimonial__author {
