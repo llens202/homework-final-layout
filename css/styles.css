@@ -786,7 +786,7 @@ address {
 }
 @media (max-width: 728px) {
   .testimonial__quote {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .testimonial__author {
@@ -1066,7 +1066,6 @@ address {
 .publications__link::after {
   content: ">";
   line-height: 1;
-  transform: translateY(-1px);
 }
 .publications__title {
   font-weight: 700;
